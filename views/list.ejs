@@ -1,0 +1,41 @@
+<%- include("header") -%>
+
+    <h1>My To-Do List</h1>
+    <nav>
+        <!-- For every dyanmic item, print name and link? -->
+        <% dynamicListNames.forEach(function(listName){ %>
+            <a href="http://localhost:3000/<%= listName %>"><%= listName %></a>
+        <% }) %>
+        
+    </nav>
+
+    <section class="list_section">
+    <h2><%= listTitle %></h2>
+        <% itemList.forEach(function(item){ %>
+            <form action="/delete" method="post">
+                <input type="hidden" name="listTitle" value="<%= listTitle %>"/>
+                <div class="item">
+                    <p><input type="checkbox" name="deleteItemId" id="<%=item._id%>" onChange="this.form.submit()" value="<%=item._id%>"/>
+                        <%= item.name %></p>
+                    </div> 
+                </form>
+                
+    <% }) %>
+    
+    <form action="/" method="post">
+        <input type="text" name="itemName" required="required" placeholder="New Item">
+        <button type="submit" name="listName" value="<%= listTitle %>" >Add</button>
+    </form>
+</section>
+<section class="instructions">
+    <h3>Instructions</h3>
+    <ul>
+        <li>To add an item to todo list, simply type item into input area and click "Add"</li>
+        <li>To remove an item from todo list, check the checkbox</li>
+        <li>To create a new todo list, type new list name in URL (eg. "/Homework")</li>
+        <li>Created lists will automatically be added to navigation bar</li>
+    </ul>
+</section>
+
+
+<%- include("footer") -%>
