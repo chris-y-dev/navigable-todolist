@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-//Connect to mongoDB
+//Connect to mongoDB (using Heroku config environment to hide MongoDB username/pw)
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
 .then(() => console.log('MongoDB connected!'))
 .catch(err => console.log('Error:- ' + err));
