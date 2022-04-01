@@ -1,13 +1,15 @@
 html {
-  background-color: rgb(0, 38, 24);
+  background-color: rgb(1, 33, 26);
   color: white;
   font-family: Helvetica, serif;
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  /* overflow-x: hidden; */
 }
 
 h1 {
@@ -17,17 +19,16 @@ h1 {
 
 nav {
   background-color: rgba(133, 133, 133, 0.8);
-  width: inherit;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 1rem 1rem;
+  margin: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 5px;
   display: inline-block;
 }
 
@@ -82,12 +83,91 @@ input:focus {
   box-shadow: 1px 1px 10px 2px rgba(141, 255, 240, 0.5);
 }
 
+.instructions_section {
+  width: 80%;
+  margin: 80px auto;
+  color: rgb(201, 201, 201);
+}
+
+h3 {
+  font-size: 18px;
+  box-shadow: inset 0 0 0 0 rgba(141, 255, 240, 0.5);
+  color: white;
+  margin: 0 -4px;
+  padding: 4px 4px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#instructions:hover {
+  box-shadow: inset 112px 0 0 0 rgba(141, 255, 240, 0.5);
+  color: white;
+}
+
+#upcoming:hover {
+  box-shadow: inset 180px 0 0 0 rgba(141, 255, 240, 0.5);
+  color: white;
+}
+
+#checkcode a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+#checkcode:hover {
+  box-shadow: inset 180px 0 0 0 rgba(141, 255, 240, 0.5);
+  color: white;
+}
+
+#checkcode a:hover {
+  color: white;
+}
+
+.instructions_section p,
+.instructions_section li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+strong {
+  color: white;
+}
+
+strong:hover {
+  color: rgb(141, 255, 240);
+}
+
+.float {
+  text-align: right;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 16px 0;
+}
+
+footer a {
+  color: rgb(0, 201, 181);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(141, 255, 240);
+}
+
+.footer-small {
+  color: rgb(201, 201, 201);
+  font-size: 12px;
+  font-style: italic;
+}
+
 /* Responsive */
 
 @media only screen and (min-width: 400px) {
   input[type="text"] {
     width: 65%;
     margin-right: 10px;
+    vertical-align: middle;
   }
   button {
     width: 25%;

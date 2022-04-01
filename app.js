@@ -91,8 +91,9 @@ app.post("/", function(req,res){
             foundItem.items.push(newTodo);
             foundItem.save();
             console.log(`Pushed ${newTodo}`);
+            res.redirect("/"+listName);
         });
-        res.redirect("/"+listName);
+       
     }
     
 })

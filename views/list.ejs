@@ -1,6 +1,6 @@
 <%- include("header") -%>
 
-    <h1>My To-Do List</h1>
+    <h1>Navigatable To-Do List</h1>
     <nav>
         <!-- For every dyanmic item, print name and link? -->
         <% dynamicListNames.forEach(function(listName){ %>
@@ -30,13 +30,23 @@
         <button type="submit" name="listName" value="<%= listTitle %>" >Add</button>
     </form>
 </section>
-<section class="instructions">
-    <h3>Instructions</h3>
+<section class="instructions_section">
+    <p class="float"><em>A todo list...but with extra functionalities</em></p>
+    <h3 id="instructions">Instructions</h3>
     <ul>
-        <li>To add an item to todo list, simply type item into input area and click "Add"</li>
-        <li>To remove an item from todo list, check the checkbox</li>
-        <li>To create a new todo list, type new list name in URL (eg. "/Homework")</li>
+        <li>To <strong>add</strong> an item to todo list, simply type item into input area and click "Add"</li>
+        <li>To <strong>remove</strong> an item from todo list, check the checkbox</li>
+        <li>To <strong>create</strong> a new todo list, type new list name in URL <em>(eg. "/Homework")</em></li>
         <li>Created lists will automatically be added to navigation bar</li>
+    </ul>
+    <h3 id="upcoming">Upcoming changes</h3>
+    <ul>
+        <li>Function to allow users to remove custom todo list from Nav bar & delete list from database</li>
+    </ul>
+    <h3 id="checkcode"><a href="https://github.com/chrisyuen976/navigatable-todolist">Check out my code!</a></h3>
+    <ul>
+        <li>JS code file is filled with commentary or intended purposes and functions</li>
+        <li>Everything was <strong>coded from scratch by me</strong> (other than the sub-heading animation😎)</li>
     </ul>
 </section>
 
