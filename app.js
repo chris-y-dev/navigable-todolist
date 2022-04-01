@@ -167,5 +167,3 @@ if (port == null || port == "") {
 app.listen(port, function(){
  console.log(`Server active on port ${port}`);
 });
-
-// Testing
