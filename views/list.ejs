@@ -4,7 +4,8 @@
     <nav>
         <!-- For every dyanmic item, print name and link? -->
         <% dynamicListNames.forEach(function(listName){ %>
-            <a href="http://localhost:3000/<%= listName %>"><%= listName %></a>
+            <a href="<%= listName %>"><%= listName %></a>
+            <!-- http://localhost:3000/ -->
         <% }) %>
         
     </nav>
