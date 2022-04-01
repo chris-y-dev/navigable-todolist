@@ -101,11 +101,6 @@ app.post("/", function(req,res){
     
 })
 
-// //creating routes for another page
-// app.get("/work", function(req,res){
-//     res.render("list", {listTitle: "Work", itemList: workList}) //render a differnet array
-// })
-
 app.post("/delete", function(req,res){
     //Get item ID from list by assignent name+value to checkbox
     const deleteItemId = req.body.deleteItemId;
