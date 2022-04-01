@@ -3,13 +3,16 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
 
+const uri = process.env.MONGODB_URI
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //Connect to mongoDB
-mongoose.connect("mongodb+srv://admin-chris:admin1@cluster0.4khty.mongodb.net/myListDB");
+mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
+.then(() => console.log('MongoDB connected!'))
+.catch(err => console.log('Error:- ' + err));
 
 //create new Schema (data type)
 const todoItem = new mongoose.Schema({
