@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-const { TopologyDescription } = require("mongoose/node_modules/mongodb");
 
 const app = express();
 app.set("view engine", "ejs");
