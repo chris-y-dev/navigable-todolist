@@ -32,6 +32,7 @@ const Todo = new mongoose.model("Todo", todoItem);
 const DynamicTodo = new mongoose.model("DynamicTodo", dynamicSchema);
 
 let dynamicListNames = [];
+
 //Function for Navbar - Search DB, add to array and replace existing array
 //FIXED - IF ELSE conditions account for Errors, empty array and filled array
 const searchAndUpdateNavbar = function(){
