@@ -40,15 +40,14 @@ const searchAndUpdateNavbar = function(){
         if(err){
             console.log(err)
         } else {
-            if (!foundItems){
-                dynamicListNames = [];
-            } else {
+            if (foundItems){
                 const updateDynamicListNames = [];
                 foundItems.forEach(function(item){
                     updateDynamicListNames.push(item.name);
-                    dynamicListNames = updateDynamicListNames;
-                    console.log(dynamicListNames);
+                    return dynamicListNames = updateDynamicListNames;
                 })
+            } else {
+                return dynamicListNames = [];
             }
         }
     });
@@ -158,6 +157,8 @@ app.get('/:listName', function(req,res){
         }
     })
 })
+
+//Delete route - TO BE ADDED
 
 let port = process.env.PORT;
 if (port == null || port == "") {
